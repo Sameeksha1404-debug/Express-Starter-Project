@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+
 
 
 const ServerConfig = require('./config/serverConfig');
@@ -10,9 +10,9 @@ const connectDB = require('./config/dbConfig');
 
 const app= express();
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));            
-app.use(bodyParser.text());
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));            
+app.use(express.text());
 // here app is the server 
 
 
